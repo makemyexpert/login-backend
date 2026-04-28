@@ -17,7 +17,7 @@ const pool = new Pool({
   host:     process.env.DB_HOST     || 'db.ryhavslifuljjcsuuwxw.supabase.co',
   port:     process.env.DB_PORT     || 5432,
   database: process.env.DB_NAME     || 'postgres',
-  user:     process.env.DB_USER     || 'postgres',
+  user:     process.env.DB_USER     || 'postgres.ryhavslifuljjcsuuwxw',
   password: process.env.DB_PASSWORD || 'WOCyXo6mFtDBlSWv',
   family: 4, // 👈 force IPv4
 });
