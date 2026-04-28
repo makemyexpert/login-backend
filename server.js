@@ -15,6 +15,7 @@ const pool = new Pool({
   database: process.env.DB_NAME     || 'postgres',
   user:     process.env.DB_USER     || 'postgres',
   password: process.env.DB_PASSWORD || 'WOCyXo6mFtDBlSWv',
+  family: 4, // 👈 force IPv4
 });
 
 // ─── Setup: Create table & seed demo user ────────────────────────────────────
