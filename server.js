@@ -9,16 +9,21 @@ app.use(express.json());
 app.use(cors());
 
 // ─── PostgreSQL Connection ────────────────────────────────────────────────────
+// const pool = new Pool({
+//   //connectionString: process.env.DATABASE_URL || 'postgresql://postgres.ryhavslifuljjcsuuwxw:WOCyXo6mFtDBlSWv@aws-0-ap-south-1.pooler.supabase.com:6543/postgres',
+//   host:     process.env.DB_HOST     || 'aws-0-ap-south-1.pooler.supabase.com',
+//   port:     process.env.DB_PORT     || 5432,
+//   database: process.env.DB_NAME     || 'postgres',
+//   user:     process.env.DB_USER     || 'postgres.ryhavslifuljjcsuuwxw',
+//   password: process.env.DB_PASSWORD || 'WOCyXo6mFtDBlSWv',
+//   ssl: {
+//     rejectUnauthorized: false
+//   },
+// });
+
 const pool = new Pool({
-  //connectionString: process.env.DATABASE_URL || 'postgresql://postgres.ryhavslifuljjcsuuwxw:WOCyXo6mFtDBlSWv@aws-0-ap-south-1.pooler.supabase.com:6543/postgres',
-  host:     process.env.DB_HOST     || 'aws-0-ap-south-1.pooler.supabase.com',
-  port:     process.env.DB_PORT     || 5432,
-  database: process.env.DB_NAME     || 'postgres',
-  user:     process.env.DB_USER     || 'postgres.ryhavslifuljjcsuuwxw',
-  password: process.env.DB_PASSWORD || 'WOCyXo6mFtDBlSWv',
-  ssl: {
-    rejectUnauthorized: false
-  },
+  connectionString: process.env.DATABASE_URL,
+  ssl: { rejectUnauthorized: false }
 });
 
 // ─── Setup: Create table & seed demo user ────────────────────────────────────
