@@ -10,7 +10,7 @@ app.use(cors());
 
 // ─── PostgreSQL Connection ────────────────────────────────────────────────────
 const pool = new Pool({
-  connectionString: process.env.DATABASE_URL,
+  connectionString: process.env.DATABASE_URL || 'postgresql://postgres.ryhavslifuljjcsuuwxw:WOCyXo6mFtDBlSWv@aws-0-ap-south-1.pooler.supabase.com:6543/postgres',
   ssl: {
     rejectUnauthorized: false
   },
