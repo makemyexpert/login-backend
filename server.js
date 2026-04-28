@@ -10,13 +10,13 @@ app.use(cors());
 
 // ─── PostgreSQL Connection ────────────────────────────────────────────────────
 const pool = new Pool({
-  connectionString: process.env.DATABASE_URL || 'postgresql://postgres.ryhavslifuljjcsuuwxw:WOCyXo6mFtDBlSWv@aws-0-ap-south-1.pooler.supabase.com:6543/postgres',
+  //connectionString: process.env.DATABASE_URL || 'postgresql://postgres.ryhavslifuljjcsuuwxw:WOCyXo6mFtDBlSWv@aws-0-ap-south-1.pooler.supabase.com:6543/postgres',
   ssl: {
     rejectUnauthorized: false
   },
   host:     process.env.DB_HOST     || 'db.ryhavslifuljjcsuuwxw.supabase.co',
   port:     process.env.DB_PORT     || 5432,
-  database: process.env.DB_NAME     || 'postgres',
+  database: process.env.DB_NAME     || 'myapp',
   user:     process.env.DB_USER     || 'postgres.ryhavslifuljjcsuuwxw',
   password: process.env.DB_PASSWORD || 'WOCyXo6mFtDBlSWv',
   family: 4, // 👈 force IPv4
