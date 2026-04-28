@@ -10,11 +10,11 @@ app.use(cors());
 
 // ─── PostgreSQL Connection ────────────────────────────────────────────────────
 const pool = new Pool({
-  host:     process.env.DB_HOST     || 'localhost',
+  host:     process.env.DB_HOST     || 'db.ryhavslifuljjcsuuwxw.supabase.co',
   port:     process.env.DB_PORT     || 5432,
-  database: process.env.DB_NAME     || 'myapp',
-  user:     process.env.DB_USER     || 'loktantram',
-  password: process.env.DB_PASSWORD || '',
+  database: process.env.DB_NAME     || 'postgres',
+  user:     process.env.DB_USER     || 'postgres',
+  password: process.env.DB_PASSWORD || 'WOCyXo6mFtDBlSWv',
 });
 
 // ─── Setup: Create table & seed demo user ────────────────────────────────────
